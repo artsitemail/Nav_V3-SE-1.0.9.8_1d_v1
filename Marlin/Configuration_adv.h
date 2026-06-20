@@ -2880,22 +2880,22 @@
    */
   #define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     100  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    100
-  #define Y_HYBRID_THRESHOLD     100
-  #define Y2_HYBRID_THRESHOLD    100
-  #define Z_HYBRID_THRESHOLD       3
-  #define Z2_HYBRID_THRESHOLD      3
-  #define Z3_HYBRID_THRESHOLD      3
-  #define Z4_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
-  #define E5_HYBRID_THRESHOLD     30
-  #define E6_HYBRID_THRESHOLD     30
-  #define E7_HYBRID_THRESHOLD     30
+  #define X_HYBRID_THRESHOLD     130  // [mm/s] Silencioso nas paredes e travels (100-120). Força só no infill (180).
+  #define X2_HYBRID_THRESHOLD    130
+  #define Y_HYBRID_THRESHOLD     130  // Silencioso nas paredes e travels. Força só no infill.
+  #define Y2_HYBRID_THRESHOLD    130
+  #define Z_HYBRID_THRESHOLD       5  // O eixo Z é lento, 5 mm/s é uma boa margem.
+  #define Z2_HYBRID_THRESHOLD      5
+  #define Z3_HYBRID_THRESHOLD      5
+  #define Z4_HYBRID_THRESHOLD      5
+  #define E0_HYBRID_THRESHOLD     70  // Silencioso nas retrações normais (até 70 mm/s).
+  #define E1_HYBRID_THRESHOLD     70
+  #define E2_HYBRID_THRESHOLD     70
+  #define E3_HYBRID_THRESHOLD     70
+  #define E4_HYBRID_THRESHOLD     70
+  #define E5_HYBRID_THRESHOLD     70
+  #define E6_HYBRID_THRESHOLD     70
+  #define E7_HYBRID_THRESHOLD     70
 
   /**
    * Use StallGuard to home / probe X, Y, Z.
