@@ -2626,13 +2626,13 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       550  //解决Z轴温度过高的问题 ——20230220
+    #define Z_CURRENT       800//550  //解决Z轴温度过高的问题 ——20230220
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
     #define Z_RSENSE         0.15
     #define Z_CHAIN_POS      -1
     #define Z_INTERPOLATE  true
-    #define Z_HOLD_MULTIPLIER HOLD_MULTIPLIER
+    #define Z_HOLD_MULTIPLIER 1//HOLD_MULTIPLIER
   #endif
 
   #if AXIS_IS_TMC(Z2)
