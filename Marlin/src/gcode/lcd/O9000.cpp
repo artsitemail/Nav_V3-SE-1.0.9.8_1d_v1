@@ -4,6 +4,11 @@
 #include "../../lcd/dwin/e3v2/dwin.h"
 #include "../../lcd/marlinui.h"
 
+void GcodeSuite::O9000() {
+  // Função silenciada: Não faz nada, apenas previne erros de compilação
+  return;
+}
+
 /**
  * M5000: Set Printing Details JOB from OctoPrint in LCD
  *
