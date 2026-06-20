@@ -2583,7 +2583,7 @@
    * Interpolate microsteps to 256
    * Override for each driver with <driver>_INTERPOLATE settings below
    */
-  #define INTERPOLATE      false
+  #define INTERPOLATE      true
 
   #if AXIS_IS_TMC(X)
     #define X_CURRENT       550        // (mA) RMS current. Multiply by 1.414 for peak current.
@@ -2591,7 +2591,7 @@
     #define X_MICROSTEPS    16        // 0..256 微步细分
     #define X_RSENSE        0.15      //
     #define X_CHAIN_POS     -1        // -1..0: Not chained. 1: MCU MOSI connected. 2: Next in chain, ...
-    #define X_INTERPOLATE  false//true      // Enable to override 'INTERPOLATE' for the X axis
+    #define X_INTERPOLATE  true      // false to override 'INTERPOLATE' for the X axis
     #define X_HOLD_MULTIPLIER HOLD_MULTIPLIER
   #endif
 
@@ -2601,7 +2601,7 @@
     #define X2_MICROSTEPS   X_MICROSTEPS
     #define X2_RSENSE       0.15
     #define X2_CHAIN_POS    -1
-    //#define X2_INTERPOLATE true
+    #define X2_INTERPOLATE true
     #define X2_HOLD_MULTIPLIER HOLD_MULTIPLIER
   #endif
 
@@ -2611,7 +2611,7 @@
     #define Y_MICROSTEPS    16
     #define Y_RSENSE        0.15
     #define Y_CHAIN_POS     -1
-    //#define Y_INTERPOLATE  true
+    #define Y_INTERPOLATE  true
     #define Y_HOLD_MULTIPLIER HOLD_MULTIPLIER
   #endif
 
@@ -2621,18 +2621,18 @@
     #define Y2_MICROSTEPS   Y_MICROSTEPS
     #define Y2_RSENSE        0.15
     #define Y2_CHAIN_POS     -1
-    //#define Y2_INTERPOLATE true
+    #define Y2_INTERPOLATE true
     #define Y2_HOLD_MULTIPLIER HOLD_MULTIPLIER
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       800//550  //解决Z轴温度过高的问题 ——20230220
+    #define Z_CURRENT       550  //解决Z轴温度过高的问题 ——20230220
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
     #define Z_RSENSE         0.15
     #define Z_CHAIN_POS      -1
-    //#define Z_INTERPOLATE  true
-    #define Z_HOLD_MULTIPLIER 1//HOLD_MULTIPLIER
+    #define Z_INTERPOLATE  true
+    #define Z_HOLD_MULTIPLIER HOLD_MULTIPLIER
   #endif
 
   #if AXIS_IS_TMC(Z2)
@@ -2641,7 +2641,7 @@
     #define Z2_MICROSTEPS   Z_MICROSTEPS
     #define Z2_RSENSE       0.15
     #define Z2_CHAIN_POS    -1
-    //#define Z2_INTERPOLATE true
+    #define Z2_INTERPOLATE true
     #define Z2_HOLD_MULTIPLIER HOLD_MULTIPLIER
   #endif
 
@@ -2651,7 +2651,7 @@
     #define Z3_MICROSTEPS    Z_MICROSTEPS
     #define Z3_RSENSE         0.15
     #define Z3_CHAIN_POS     -1
-    //#define Z3_INTERPOLATE true
+    #define Z3_INTERPOLATE true
     #define Z3_HOLD_MULTIPLIER HOLD_MULTIPLIER
   #endif
 
@@ -2670,7 +2670,7 @@
     #define E0_MICROSTEPS    16  //
     #define E0_RSENSE        0.15
     #define E0_CHAIN_POS     -1
-    // #define E0_INTERPOLATE true
+    #define E0_INTERPOLATE true
     #define E0_HOLD_MULTIPLIER 1//HOLD_MULTIPLIER
   #endif
 
@@ -2679,7 +2679,7 @@
     #define E1_MICROSTEPS   E0_MICROSTEPS
     #define E1_RSENSE       0.15
     #define E1_CHAIN_POS    -1
-    //#define E1_INTERPOLATE true
+    #define E1_INTERPOLATE true
     #define E1_HOLD_MULTIPLIER HOLD_MULTIPLIER 
   #endif
 
@@ -2688,7 +2688,7 @@
     #define E2_MICROSTEPS   E0_MICROSTEPS
     #define E2_RSENSE         0.15
     #define E2_CHAIN_POS     -1
-    //#define E2_INTERPOLATE true
+    #define E2_INTERPOLATE true
     #define E2_HOLD_MULTIPLIER HOLD_MULTIPLIER 
   #endif
 
@@ -2697,7 +2697,7 @@
     #define E3_MICROSTEPS   E0_MICROSTEPS
     #define E3_RSENSE         0.11
     #define E3_CHAIN_POS     -1
-    //#define E3_INTERPOLATE true
+    #define E3_INTERPOLATE true
     #define E3_HOLD_MULTIPLIER HOLD_MULTIPLIER 
   #endif
 
@@ -2706,7 +2706,7 @@
     #define E4_MICROSTEPS   E0_MICROSTEPS
     #define E4_RSENSE        0.11
     #define E4_CHAIN_POS     -1
-    //#define E4_INTERPOLATE true
+    #define E4_INTERPOLATE true
     #define E4_HOLD_MULTIPLIER HOLD_MULTIPLIER 
   #endif
 
@@ -2715,7 +2715,7 @@
     #define E5_MICROSTEPS   E0_MICROSTEPS
     #define E5_RSENSE         0.11
     #define E5_CHAIN_POS     -1
-    //#define E5_INTERPOLATE true
+    #define E5_INTERPOLATE true
     #define E5_HOLD_MULTIPLIER HOLD_MULTIPLIER 
   #endif
 
@@ -2724,7 +2724,7 @@
     #define E6_MICROSTEPS   E0_MICROSTEPS
     #define E6_RSENSE         0.11
     #define E6_CHAIN_POS     -1
-    //#define E6_INTERPOLATE true
+    #define E6_INTERPOLATE true
     #define E6_HOLD_MULTIPLIER HOLD_MULTIPLIER 
   #endif
 
@@ -2733,7 +2733,7 @@
     #define E7_MICROSTEPS   E0_MICROSTEPS
     #define E7_RSENSE         0.11
     #define E7_CHAIN_POS     -1
-    //#define E7_INTERPOLATE true
+    #define E7_INTERPOLATE true
     #define E7_HOLD_MULTIPLIER HOLD_MULTIPLIER 
   #endif
 
